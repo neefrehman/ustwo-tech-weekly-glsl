@@ -6,7 +6,7 @@ This project is a simple Preact app bundled with Snowpack/esbuild. The WebGL ren
 
 ## ⚠️ Flashing lights and motion
 
-This demo involves manipulating pixels on the canvas in various ways. If you are sensitive to flashing lights or motion please don't let me know beforehand and I can see if we can adapt the demo to tone things down.
+This demo involves manipulating pixels on the canvas, resulting in lots of changing colours and movement. If you are sensitive to either of these then _please_ let me know beforehand, and I can see if we can adapt the demo to tone things down.
 
 ## Getting Started
 
