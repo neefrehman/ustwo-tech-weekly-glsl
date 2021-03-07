@@ -1,8 +1,7 @@
 import { h } from "preact";
 import glsl from "glslify";
 
-import { WebGLRenderer } from "./WebGLRenderer";
-import type { WebGLSetupFn } from "./WebGLRenderer";
+import { WebGLRenderer, WebGLSetupFn } from "./WebGLRenderer";
 
 import { inRange } from "./utils/random";
 
@@ -33,15 +32,14 @@ const sketch: WebGLSetupFn = ({ width, height, aspect }) => {
             
                 vec2 pos = uv - vec2(0.5);
 
-                gl_FragColor = vec4(vec3(1.0, 0.0, 0.0), 1.0);
+                gl_FragColor = vec4(vec3(abs(sin(time)), 0.0, 0.0), 1.0);
             }
         `,
-        onFrame: (props) => {
-            
+        onFrame: ({ uniforms, ...props }) => {
+            uniforms.time.value = props.elapsedTime;
+            uniforms.mousePosition.value = props.normalisedMousePosition;
         },
     };
 };
 
-export const Scene = () => {
-    return <WebGLRenderer sketch={sketch} />;
-};
+export const Scene = () => <WebGLRenderer sketch={sketch} />;

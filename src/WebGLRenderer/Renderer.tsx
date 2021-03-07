@@ -3,17 +3,16 @@ import type { JSX } from "preact";
 import { useRef, useEffect } from "preact/hooks";
 import glsl from "glslify";
 
-import { useAnimationFrame } from "./useAnimationFrame";
-import type { OnFrameProps } from "./useAnimationFrame";
+import { useAnimationFrame, OnFrameProps } from "./useAnimationFrame";
 
 import type { UniformDict, UniformType } from "./types";
 
-import type { GLContext } from "./helpers";
 import {
     compileShader,
     createAttribute,
     getUniformLocation,
     setUniform,
+    GLContext,
 } from "./helpers";
 
 /** Component props for the WebGLRenderer */
@@ -56,6 +55,7 @@ export const WebGLRenderer = ({
         animationProps => {
             drawFunction.current?.({
                 ...drawProps.current,
+                uniforms: uniformsRef.current,
                 ...animationProps,
                 startAnimation,
                 stopAnimation,

@@ -16,7 +16,7 @@ Let me know if you run into any problems and I'll help out.
 
 #### Fast refresh dev server workaround
 
-There is [an issue with fast refresh that causes production builds to error](https://github.com/snowpackjs/snowpack/discussions/1458), I've kept Fast Refresh (via `prefresh`) enabled to keep the feedback loop fast, since we'll only be using the dev server in our session. If you want to create a production build I reccommend you comment out the lines that I've marked in `snowpack.config.js` and `.babelrc`.
+There is [an issue with fast refresh that causes production builds to error](https://github.com/snowpackjs/snowpack/discussions/1458). I've kept fast refresh (via `prefresh`) enabled to keep the feedback loop fast, since we'll only be using the dev server in our session. If you want to create a production build I reccommend you comment out the lines that I've marked in `snowpack.config.js` and `.babelrc`.
 
 ## Resources
 

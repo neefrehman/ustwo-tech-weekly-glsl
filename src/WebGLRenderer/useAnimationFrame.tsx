@@ -50,8 +50,10 @@ export const useAnimationFrame = (
 
             const runFrame = () => {
                 onFrame?.({
-                    elapsedTime: elapsedTime.current,
-                    deltaTime: deltaTime.current,
+                    elapsedTime: elapsedTime.current * 0.001,
+                    deltaTime: deltaTime.current * 0.001,
+                    elapsedTimeMs: elapsedTime.current,
+                    deltaTimeMs: deltaTime.current,
                     frameCount: frameCount.current,
                     fps: averageFps.current,
                     isPlaying: isPlaying.current,
@@ -228,10 +230,14 @@ interface UseAnimationFrameOptions {
 export interface OnFrameProps {
     /** The current number of elapsed frames */
     frameCount: number;
-    /** The current elapsed time of the animation in ms */
+    /** The current elapsed time of the animation in seconds */
     elapsedTime: number;
-    /** The difference between the current and previous frames in ms */
+    /** The difference between the current and previous frames in seconds */
     deltaTime: number;
+    /** elapsedTime in ms */
+    elapsedTimeMs: number;
+    /** deltaTime in ms */
+    deltaTimeMs: number;
     /** The current fps of the animation (averaged over the last 20 frames) */
     fps: number;
     /** A function that will stop the animation when called */
