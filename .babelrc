@@ -1,0 +1,16 @@
+{
+    "presets": [
+        [
+            "@babel/preset-react",
+            {
+                "pragma": "h",
+                "pragmaFrag": "Fragment"
+            }
+        ],
+        ["@babel/preset-typescript", { "jsxPragma": "h" }]
+    ],
+    "plugins": [
+        "glsl",
+        ["@prefresh/babel-plugin", { "skipEnvCheck": true }] // COMMENT OUT THIS LINE FOR PRODUCTION
+    ]
+}
