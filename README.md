@@ -4,7 +4,11 @@
 
 This project is a simple Preact app bundled with Snowpack/esbuild. The WebGL renderer is adapted form another project of mine. Feel free to take a look at it to see how things work under the hood, but for the purposes of our session we only really care about the `src/Scene.tsx` file.
 
-### Getting Started
+## ⚠️ Flashing lights and motion
+
+This demo involves manipulating pixels on the canvas in various ways. If you are sensitive to flashing lights or motion please don't let me know beforehand and I can see if we can adapt the demo to tone things down.
+
+## Getting Started
 
 To get started on your device, fork this repo and run:
 
