@@ -1,5 +1,7 @@
 # ustwo-tech-weekly-glsl
 
+We'll go through some shader basics and then hopefully freestyle a little!
+
 ## Getting Started
 
 To get started on your device, fork this repo and run:
